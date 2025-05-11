@@ -77,7 +77,8 @@
         </video>
         <div class="preloader">
             <div id="handle-preloader" class="handle-preloader">
-                <p class="loader-header" style="margin-top: -400px; margin-right: 200px; color: white;"><strong>WELCOME TO IRSM</strong>
+                <p class="loader-header" style="margin-top: -400px; margin-right: 200px; color: white;"><strong>WELCOME
+                        TO IRSM</strong>
                 </p>
                 <div class="animation-preloader">
                     <div class="txt-loading">
@@ -186,26 +187,26 @@
                 </div>
                 <div class="modal-body">
                     <div class="contact-page__top-form">
-                        <form class="contact-form-validated why-choose-one__form" action="assets/inc/sendemail.php"
+                        <form class="contact-form-validated why-choose-one__form"
                             method="post" novalidate="novalidate">
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="input-box">
-                                        <input type="text" name="name" placeholder="Name" required="">
+                                        <input id="txtLoginName" type="text" name="name" placeholder="Name" required>
                                         <div class="icon"><span class="icon-user"></span></div>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="input-box">
-                                        <input type="email" name="email" placeholder="Email" required="">
+                                        <input id="txtLoginEmail" type="email" name="email" placeholder="Email" required>
                                         <div class="icon"><span class="icon-email"></span></div>
                                     </div>
                                 </div>
 
                                 <div class="col-xl-12">
                                     <div class="why-choose-one__form-btn">
-                                        <button type="submit" class="thm-btn">
-                                            
+                                        <button type="submit" class="thm-btn btn-login">
+
                                             <i class="fas fa-arrow-down"></i>
                                             <span class="hover-btn hover-bx"></span>
                                             <span class="hover-btn hover-bx2"></span>
@@ -222,6 +223,52 @@
         </div>
     </div>
 
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="contact-page__top-form">
+                        <form class="contact-form-validated why-choose-one__form"
+                            method="post" novalidate="novalidate">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box">
+                                        <input id="txtLoginName" type="text" name="name" placeholder="Name" required>
+                                        <div class="icon"><span class="icon-user"></span></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box">
+                                        <input id="txtLoginEmail" type="email" name="email" placeholder="Email" required>
+                                        <div class="icon"><span class="icon-email"></span></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-12">
+                                    <div class="why-choose-one__form-btn">
+                                        <button type="submit" class="thm-btn btn-login">
+
+                                            <i class="fas fa-arrow-down"></i>
+                                            <span class="hover-btn hover-bx"></span>
+                                            <span class="hover-btn hover-bx2"></span>
+                                            <span class="hover-btn hover-bx3"></span>
+                                            <span class="hover-btn hover-bx4"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- End Sticky Button -->
 
     <div class="page-wrapper">
@@ -366,20 +413,20 @@
                                                                             <a href="#">Functional Evaluation</a>
                                                                             <ul>
                                                                                 <li><a
-                                                                                        href="functional-evaluation.html">Network
+                                                                                        onclick="validatelogin('functional-evaluation.html')">Network
                                                                                         Survey Vehicle – NSV (2D/3D)</a>
                                                                                 </li>
-                                                                                <li><a href="retro-reflectometer.html">Retro
+                                                                                <li><a onclick="validatelogin('retro-reflectometer.html')">Retro
                                                                                         Reflectometer – RR</a></li>
                                                                                 <li><a
-                                                                                        href="retrotek-road-marking.html">Line
+                                                                                    onclick="validatelogin('retrotek-road-marking.html')">Line
                                                                                         Marking</a></li>
-                                                                                <li><a href="skid-resistance.html">Skid
+                                                                                <li><a onclick="validatelogin('skid-resistance.html')">Skid
                                                                                         Resistance</a></li>
                                                                                 <li><a
-                                                                                        href="roughometer.html">Roughometer</a>
+                                                                                    onclick="validatelogin('roughometer.html')">Roughometer</a>
                                                                                 </li>
-                                                                                <li><a href="bump-indicator.html">Bump
+                                                                                <li><a onclick="validatelogin('bump-indicator.html')">Bump
                                                                                         indicator</a></li>
                                                                             </ul>
                                                                         </li>
@@ -387,45 +434,45 @@
                                                                             <a href="#">Structural Evaluation</a>
                                                                             <ul>
                                                                                 <li><a
-                                                                                        href="structural-evaluation.html">Falling
+                                                                                    onclick="validatelogin('structural-evaluation.html')">Falling
                                                                                         Weight Deflectometer (FWD)</a>
                                                                                 </li>
-                                                                                <li><a href="axle-load.html">Axle
+                                                                                <li><a onclick="validatelogin('axle-load.html')">Axle
                                                                                         Load</a></li>
                                                                             </ul>
                                                                         </li>
-                                                                        <li><a href="intelligent-pavement.html">Intelligent
+                                                                        <li><a onclick="validatelogin('intelligent-pavement.html')">Intelligent
                                                                                 Pavement Assessment Vehicle (iPAVE)</a>
                                                                         </li>
-                                                                        <li><a href="pmms.html">Pavement / Asset
+                                                                        <li><a onclick="validatelogin('pmms.html')">Pavement / Asset
                                                                                 Management System</a></li>
-                                                                        <li><a href="irap.html">Road Safety / iRAP
+                                                                        <li><a onclick="validatelogin('irap.html')">Road Safety / iRAP
                                                                                 Assessment</a></li>
-                                                                        <li><a href="data-coding.html">Data Coding &
+                                                                        <li><a onclick="validatelogin('data-coding.html')">Data Coding &
                                                                                 Analysis of Road Data Collected</a></li>
-                                                                        <li><a href="traffic-volume.html">Traffic
+                                                                        <li><a onclick="validatelogin('traffic-volume.html')">Traffic
                                                                                 Volume Surveys</a></li>
                                                                     </ul>
                                                                 </li>
                                                                 <li class="dropdown">
                                                                     <a href="#">Airports</a>
                                                                     <ul>
-                                                                        <li><a href="airport-evaluation.html">Airport –
+                                                                        <li><a onclick="validatelogin('airport-evaluation.html')">Airport –
                                                                                 PCN/PCR
                                                                                 Evaluation</a></li>
-                                                                        <li><a href="intelligent-pavement.html">Intelligent
+                                                                        <li><a onclick="validatelogin('intelligent-pavement.html')">Intelligent
                                                                                 Pavement Assessment Vehicle (iPAVE)</a>
                                                                         </li>
-                                                                        <li><a href="skid-resistance.html">Skid
+                                                                        <li><a onclick="validatelogin('skid-resistance.html')">Skid
                                                                                 Resistance</a></li>
                                                                     </ul>
                                                                 </li>
                                                                 <li class="dropdown">
                                                                     <a href="#">Tools</a>
                                                                     <ul>
-                                                                        <li><a href="hdm4.html">HDM4</a>
+                                                                        <li><a onclick="validatelogin('hdm4.html')">HDM4</a>
                                                                         </li>
-                                                                        <li><a href="dtims.html">dTIMS</a>
+                                                                        <li><a onclick="validatelogin('dtims.html')">dTIMS</a>
                                                                         </li>
                                                                     </ul>
                                                                 </li>
@@ -457,8 +504,7 @@
                                         <div class="main-header-two__bottom-right">
 
                                             <div class="btn-box">
-                                                <button class="thm-btn" data-bs-toggle="modal"
-                                                    data-bs-target="#loginModal">Brochure
+                                                <button class="thm-btn btn-broucher">Brochure
                                                     <span class="hover-btn hover-bx"></span>
                                                     <span class="hover-btn hover-bx2"></span>
                                                     <span class="hover-btn hover-bx3"></span>
@@ -523,8 +569,8 @@
                                         <li><a class="active" href="skid-resistance.html">Skid Resistance<span
                                                     class="icon-right-arrow21"></span></a></li>
 
-                                        <li><a href="structural-evaluation.html">Falling  Weight Deflectometer (FWD) <span
-                                                    class="icon-right-arrow21"></span></a></li>
+                                        <li><a href="structural-evaluation.html">Falling Weight Deflectometer (FWD)
+                                                <span class="icon-right-arrow21"></span></a></li>
 
                                         <li><a href="axle-load.html">AXLE LOAD <span
                                                     class="icon-right-arrow21"></span></a></li>
@@ -558,8 +604,7 @@
 
                                         <li><a href="hdm4.html">HDM4 <span class="icon-right-arrow21"></span></a></li>
 
-                                        <li><a class="active" href="dtims.html">dTIMS <span
-                                                    class="icon-right-arrow21"></span></a></li>
+                                        <li><a href="dtims.html">dTIMS <span class="icon-right-arrow21"></span></a></li>
                                     </ul>
                                 </div>
 
@@ -648,15 +693,26 @@
                         <div class="service-details__content">
                             <div class="service-details__content-text1">
                                 <h2>SKID RESISTANCE</h2>
-                                <p>Monitoring the SKID resistance / Surface Friction characteristics trends is very crucial in keeping the Safe Drive Serviceability in-line by Road / Airport authorities. 
+                                <p>Monitoring the SKID resistance / Surface Friction characteristics trends is very
+                                    crucial in keeping the Safe Drive Serviceability in-line by Road / Airport
+                                    authorities.
                                 </p>
                             </div>
                             <div class="service-details__content-text1">
-                                <p>IRSM uses a “T5 – Surface Friction Tester” (SFT) – a trailer based Continuous Friction Measuring Equipment (CFME) - which are being regularly serviced and tested to guarantee a quality product. This CFME is Non-Destructive Testing (NDT) equipment – which is in-line with ASTM E2883 and approved by ICAO, FAA, SCAA and many more agency - meeting their standards. 
+                                <p>IRSM uses a “T5 – Surface Friction Tester” (SFT) – a trailer based Continuous
+                                    Friction Measuring Equipment (CFME) - which are being regularly serviced and tested
+                                    to guarantee a quality product. This CFME is Non-Destructive Testing (NDT) equipment
+                                    – which is in-line with ASTM E2883 and approved by ICAO, FAA, SCAA and many more
+                                    agency - meeting their standards.
                                 </p>
                             </div>
                             <div class="service-details__content-text1">
-                                <p>T5 – Surface Friction tester has a self-wetting system which simulates wet pavement surface conditions and provides the operator with a continuous record of friction values along the length of the runway. The integrated electrical water pump and nozzle are designed to provide a uniform water depth of 1 mm (0.04 inches) in front of the friction measuring tire. This wetted surface produces friction values that are most meaningful in determining if any corrective actions are required.
+                                <p>T5 – Surface Friction tester has a self-wetting system which simulates wet pavement
+                                    surface conditions and provides the operator with a continuous record of friction
+                                    values along the length of the runway. The integrated electrical water pump and
+                                    nozzle are designed to provide a uniform water depth of 1 mm (0.04 inches) in front
+                                    of the friction measuring tire. This wetted surface produces friction values that
+                                    are most meaningful in determining if any corrective actions are required.
                                 </p>
                             </div>
                         </div>

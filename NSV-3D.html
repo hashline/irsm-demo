@@ -78,7 +78,8 @@
         </video>
         <div class="preloader">
             <div id="handle-preloader" class="handle-preloader">
-                <p class="loader-header" style="margin-top: -400px; margin-right: 200px; color: white;"><strong>WELCOME TO IRSM</strong>
+                <p class="loader-header" style="margin-top: -400px; margin-right: 200px; color: white;"><strong>WELCOME
+                        TO IRSM</strong>
                 </p>
                 <div class="animation-preloader">
                     <div class="txt-loading">
@@ -90,7 +91,7 @@
         </div>
     </div>
     <!-- End Preloader -->
-    </div>
+    
     <!-- End Preloader -->
 
     <!-- Start Sticky Button -->
@@ -187,26 +188,26 @@
                 </div>
                 <div class="modal-body">
                     <div class="contact-page__top-form">
-                        <form class="contact-form-validated why-choose-one__form" action="assets/inc/sendemail.php"
+                        <form class="contact-form-validated why-choose-one__form"
                             method="post" novalidate="novalidate">
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="input-box">
-                                        <input type="text" name="name" placeholder="Name" required="">
+                                        <input id="txtLoginName" type="text" name="name" placeholder="Name" required>
                                         <div class="icon"><span class="icon-user"></span></div>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6">
                                     <div class="input-box">
-                                        <input type="email" name="email" placeholder="Email" required="">
+                                        <input id="txtLoginEmail" type="email" name="email" placeholder="Email" required>
                                         <div class="icon"><span class="icon-email"></span></div>
                                     </div>
                                 </div>
 
                                 <div class="col-xl-12">
                                     <div class="why-choose-one__form-btn">
-                                        <button type="submit" class="thm-btn">
-                                            
+                                        <button type="submit" class="thm-btn btn-login">
+
                                             <i class="fas fa-arrow-down"></i>
                                             <span class="hover-btn hover-bx"></span>
                                             <span class="hover-btn hover-bx2"></span>
@@ -456,10 +457,8 @@
                                         </div>
 
                                         <div class="main-header-two__bottom-right">
-
                                             <div class="btn-box">
-                                                <button class="thm-btn" data-bs-toggle="modal"
-                                                    data-bs-target="#loginModal">Brochure
+                                                <button class="thm-btn btn-broucher">Brochure
                                                     <span class="hover-btn hover-bx"></span>
                                                     <span class="hover-btn hover-bx2"></span>
                                                     <span class="hover-btn hover-bx3"></span>
@@ -514,7 +513,7 @@
                                 <div class="service-details__sidebar-single-service">
                                     <ul class="clearfix">
                                         <li><a href="functional-evaluation.html">Network Survey Vehicle –
-                                            NSV (2D) <span class="icon-right-arrow21"></span></a></li>
+                                                NSV (2D) <span class="icon-right-arrow21"></span></a></li>
 
                                         <li><a class="active" href="NSV-3D.html">Network Survey Vehicle – NSV (3D) <span
                                                     class="icon-right-arrow21"></span></a></li>
@@ -528,19 +527,21 @@
                                         <li><a href="skid-resistance.html">Skid Resistance<span
                                                     class="icon-right-arrow21"></span></a></li>
 
-                                        <li><a href="structural-evaluation.html">Falling / Heavy/Super Heavy Weight Deflectometer (FWD/HWD/SHWD) <span class="icon-right-arrow21"></span></a></li>
+                                        <li><a href="structural-evaluation.html">Falling / Heavy/Super Heavy Weight
+                                                Deflectometer (FWD/HWD/SHWD) <span
+                                                    class="icon-right-arrow21"></span></a></li>
 
                                         <li><a href="axle-load.html">AXLE LOAD <span
                                                     class="icon-right-arrow21"></span></a></li>
 
-                                                    <li><a href="roughometer.html">Roughometer <span
-                                                                class="icon-right-arrow21"></span></a></li>
-            
-                                                    <li><a href="bump-indicator.html">Bump indicator <span
-                                                                class="icon-right-arrow21"></span></a></li>
-            
-                                                    <li><a href="traffic-volume.html">Traffic Volume Surveys <span
-                                                                class="icon-right-arrow21"></span></a></li>
+                                        <li><a href="roughometer.html">Roughometer <span
+                                                    class="icon-right-arrow21"></span></a></li>
+
+                                        <li><a href="bump-indicator.html">Bump indicator <span
+                                                    class="icon-right-arrow21"></span></a></li>
+
+                                        <li><a href="traffic-volume.html">Traffic Volume Surveys <span
+                                                    class="icon-right-arrow21"></span></a></li>
 
                                         <li><a href="intelligent-pavement.html">Intelligent
                                                 Pavement Assessment Vehicle (iPAVE)
@@ -560,8 +561,7 @@
                                                 PCN/PCR
                                                 Evaluation <span class="icon-right-arrow21"></span></a></li>
 
-                                        <li><a href="hdm4.html">HDM4 <span
-                                                    class="icon-right-arrow21"></span></a></li>
+                                        <li><a href="hdm4.html">HDM4 <span class="icon-right-arrow21"></span></a></li>
                                     </ul>
                                 </div>
 
@@ -578,44 +578,60 @@
                                 <div class="inner">
                                     <img src="assets/images/services/nsv3d/Picture1.png" alt="#">
                                 </div>
-                                <b>Network Survey Vehicles (NSVs) are equipped with a 3D Laser Crack Measurement System.  </b>
-                                <p>These vehicles offer extensive capabilities and can extract a wide variety of information from all types of pavements across road networks and airports.
+                                <b>Network Survey Vehicles (NSVs) are equipped with a 3D Laser Crack Measurement System.
+                                </b>
+                                <p>These vehicles offer extensive capabilities and can extract a wide variety of
+                                    information from all types of pavements across road networks and airports.
                                 </p>
                             </div>
                             <div class="service-details__content-text1">
-                                <p>The survey equipment will have sufficient power to carry the pavement data collection and this includes modules like</p>
+                                <p>The survey equipment will have sufficient power to carry the pavement data collection
+                                    and this includes modules like</p>
                             </div>
                             <div class="service-details__content-text1">
                                 <b>Applications</b>
                                 <ul>
                                     <li>
-                                        <p><span class="fas fa-road px-2"></span>Camera – calibrated imagery enables to measure, take Geo-reference make it best to extract Roadside inventory  </p>
+                                        <p><span class="fas fa-road px-2"></span>Camera – calibrated imagery enables to
+                                            measure, take Geo-reference make it best to extract Roadside inventory </p>
                                     </li>
                                     <li>
-                                        <p><span class="fas fa-road px-2"></span>Digital Laser profiler – can deliver IRI, Rut, Texture </p>
+                                        <p><span class="fas fa-road px-2"></span>Digital Laser profiler – can deliver
+                                            IRI, Rut, Texture </p>
                                     </li>
                                     <li>
-                                        <p><span class="fas fa-road px-2"></span>DGPS based submeter accurate Geo references, 
+                                        <p><span class="fas fa-road px-2"></span>DGPS based submeter accurate Geo
+                                            references,
                                         </p>
                                     </li>
                                     <li>
                                         <p><span class="fas fa-road px-2"></span>GIPSITRAC – Road Geometry</p>
                                     </li>
                                     <li>
-                                        <p><span class="fas fa-road px-2"></span>Distance – more accurate Distance measurements, 
+                                        <p><span class="fas fa-road px-2"></span>Distance – more accurate Distance
+                                            measurements,
                                         </p>
                                     </li>
                                     <li>
-                                        <p><span class="fas fa-road px-2"></span>Automatic Crack Detection (ACD) system – can detects the Crack, surface defects using latest AI trained model. 
+                                        <p><span class="fas fa-road px-2"></span>Automatic Crack Detection (ACD) system
+                                            – can detects the Crack, surface defects using latest AI trained model.
                                         </p>
                                     </li>
                                 </ul>
                             </div>
                             <div class="service-details__content-text1">
-                                <p>This equipment possesses the capability of safely surveying across all network terrains, on any survey speed acceptance criteria and temperature conditions. These features enable to collect – a good quality data in very short duration, resulting in a safer work environment. The data collection and processing are fully transparent and do not allow the data to be tampered with in any way.</p>
+                                <p>This equipment possesses the capability of safely surveying across all network
+                                    terrains, on any survey speed acceptance criteria and temperature conditions. These
+                                    features enable to collect – a good quality data in very short duration, resulting
+                                    in a safer work environment. The data collection and processing are fully
+                                    transparent and do not allow the data to be tampered with in any way.</p>
                             </div>
                             <div class="service-details__content-text1">
-                                <p>For very large networks, an ACD-equipped vehicle can be used to automatically identify and quantify cracking using Automatic Crack Detection software, which is faster than manual visual rating. The Vehicle equipped with 13LP-equipped can operate both on unsealed roads and Sealed roads, where vehicle fitted with ACD vehicles are restricted to sealed roads.</p>
+                                <p>For very large networks, an ACD-equipped vehicle can be used to automatically
+                                    identify and quantify cracking using Automatic Crack Detection software, which is
+                                    faster than manual visual rating. The Vehicle equipped with 13LP-equipped can
+                                    operate both on unsealed roads and Sealed roads, where vehicle fitted with ACD
+                                    vehicles are restricted to sealed roads.</p>
                             </div>
                         </div>
                     </div>
@@ -639,7 +655,8 @@
 
                     <div class="footer-one--two__cta">
                         <div class="shape1">
-                            <img class="float-bob-x3" src="assets/images/shapes/footer-v2-shape2.png" alt="" style="width: 400px;">
+                            <img class="float-bob-x3" src="assets/images/shapes/footer-v2-shape2.png" alt=""
+                                style="width: 400px;">
                         </div>
                         <div class="shape2">
                             <img class="" src="assets/images/shapes/footer-v2-shape1.png" alt="" style="width: 100px;">

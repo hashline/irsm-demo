@@ -1381,3 +1381,58 @@ function RemoveFloatingClass() {
 function RemoveAnnouncementModal() {
     $('#announcementModal').modal('hide');
 }
+
+let validationurl = ''
+
+function validatelogin(url) {
+    if (localStorage.getItem('irsm-data')) {
+        window.open(url);
+    }
+    else {
+        $('#loginModal').modal('show');
+        validationurl = url;
+    }
+}
+
+$(document).ready(function () {
+    $('.btn-login').on('click', function (e) {
+        e.preventDefault();
+
+        const name = $('#txtLoginName').val();
+        const email = $('#txtLoginEmail').val();
+
+        if (name && email) {
+            const irsmdata = JSON.stringify({
+                name: name,
+                email: email
+            });
+
+            localStorage.setItem('irsm-data', irsmdata);
+
+            $('#loginModal').modal('hide');
+
+            if (validationurl.indexOf('pdf') > -1)
+                window.open(validationurl, '_blank');
+            else
+                window.open(validationurl, '_self');
+        }
+    });
+
+    $('.btn-broucher').on('click', function (e) {
+        if (localStorage.getItem('irsm-data')) {
+            window.open('./Brochure.pdf', '_blank');
+        }
+        else {
+            validationurl = './Brochure.pdf';
+            $('#loginModal').modal('show');
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+        var loginModal = new bootstrap.Modal(document.getElementById('loginmodal'));
+        loginModal.show();
+    }, 1500);
+});
