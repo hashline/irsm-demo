@@ -360,7 +360,7 @@
             dots: false,
             autoplay: true,
             autoPlayTimeout: 0,
-            smartSpeed: 10000,
+            smartSpeed: 5000,
             autoHeight: true,
             autoplayHoverPause: false,
             navText: [
@@ -593,8 +593,8 @@
             self.find("button").on("click", function (e) {
                 e.preventDefault();
                 let self = $(this);
-                self.toggleClass("expanded");
-                self.parent().toggleClass("expanded");
+                // self.toggleClass("expanded");
+                // self.parent().toggleClass("expanded");
                 self.parent().parent().children("ul").slideToggle();
             });
         });
@@ -1214,15 +1214,15 @@ $(document).ready(function () {
                 drag: 'smooth',
                 focus: 'center',
                 autoplay: true,
-                interval: 1000,
+                interval: 2000,
                 autoScroll: {
-                    speed: 0.5,
+                    speed: 0.1,
                 },
                 flickMaxPages: 1,
                 pagination: false,
                 padding: '5%',
                 margin: '25',
-                throttle: 10,
+                throttle: 1,
             });
 
             splide.mount();
@@ -1358,13 +1358,6 @@ $(document).ready(function () {
     $(window).on('scroll', function () {
         $('.main-menu__list li').removeClass('active');
     });
-
-    if ($('#announcementModal').length) {
-        $('#announcementModal').modal('show');
-        setTimeout(
-            RemoveAnnouncementModal, 15000
-        );
-    }
 
     if ($(".banner-two__img2").length) {
         setTimeout(

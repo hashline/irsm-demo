@@ -2015,7 +2015,8 @@ animation: spinner 1s infinite linear;
 
 .mobile-nav__content .main-menu__list>li>a,
 .mobile-nav__content .main-menu__list>li>ul>li>a,
-.mobile-nav__content .main-menu__list>li>ul>li>ul>li>a {
+.mobile-nav__content .main-menu__list>li>ul>li>ul>li>a,
+.mobile-nav__content .main-menu__list>li>ul>li>ul>li>ul>li>a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2078,12 +2079,6 @@ animation: spinner 1s infinite linear;
   transform: rotate(0deg);
   background-color: #fff;
   color: var(--logistiq-base);
-}
-
-/* no menu after 2rd level dropdown */
-.mobile-nav__content .main-menu__list>li>ul>li>ul>li>a>button,
-.mobile-nav__content .main-menu__list>li>ul>li>ul>li>ul {
-  display: none !important;
 }
 
 .mobile-nav__content .main-menu__list li.cart-btn span {
